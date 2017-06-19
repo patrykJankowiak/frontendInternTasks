@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Title of the document</title>
+    <link href="https://fonts.googleapis.com/css?family=Arimo" rel="stylesheet">
+    <style>
+
+
+    body {
+        font-family: 'Arimo', sans-serif;
+        font-size: 13px;
+        font-weight: 700;
+        margin-top: 100px;
+    }
+    .tooltip {
+        display: inline;
+        position: relative;
+        cursor: url(cursor1.png), pointer;
+        /* in case of 1 file */
+        /*cursor: help;*/
+        border-bottom: 1px dotted #ff5722;
+        
+        }
+
+    .tooltiptext {
+        /* visibility and positioning */
+        visibility: hidden;
+        position: absolute;
+        bottom: 30px;
+        right: -105px;
+        /*<-------- -------->*/
+        
+        background-color: #ff5722;
+        font-weight: 100;
+        font-size: 14px;
+        color: #fff;
+        border-radius: 5px;
+        text-align: left;
+        padding-left: 7px;
+        width: 240px;
+        height: 40px;
+        line-height: 40px;
+
+    }
+
+    .tooltiptext::after {
+        position: absolute;
+        top: 100%;
+        left: 105px;
+        border-width: 20px;
+        border-style: solid;
+        border-color: #ff5722 transparent transparent;
+
+    }
+
+
+    .tooltip:hover .tooltiptext{
+        visibility: visible;
+    }
+
+    </style>
+</head>
+
+<body>
+    <div>
+        This is an awesome 
+        <div class="tooltip">
+            tooltip
+            <span class="tooltiptext">It's so cool</span>
+        </div>
+    </div>
+</body>
+
+</html>
