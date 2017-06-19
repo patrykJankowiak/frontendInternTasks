@@ -10,47 +10,45 @@
         font-family: 'Arimo', sans-serif;
         font-size: 13px;
         font-weight: 700;
-        margin-top: 100px;
     }
+
     .tooltip {
+        /* in case of 1 file */
+        /*cursor: help;*/
         display: inline;
         position: relative;
         cursor: url(cursor1.png), pointer;
-        /* in case of 1 file */
-        /*cursor: help;*/
         border-bottom: 1px dotted #ff5722;
-        
-        }
+    }
 
     .tooltiptext {
-        /* visibility and positioning */
         visibility: hidden;
         position: absolute;
-        bottom: 30px;
-        right: -105px;
-        /*<-------- -------->*/
-        
+        bottom: 25px;
+        right: -85px;
+
+        width: 200px;
+        height: 30px;
         background-color: #ff5722;
+        border-radius: 5px;
+        
         font-weight: 100;
         font-size: 14px;
         color: #fff;
-        border-radius: 5px;
+
         text-align: left;
         padding-left: 7px;
-        width: 240px;
-        height: 40px;
-        line-height: 40px;
-
+        line-height: 30px;
     }
 
     .tooltiptext::after {
+        content: " ";
         position: absolute;
+        left: 90px;
         top: 100%;
-        left: 105px;
-        border-width: 20px;
+        border-width: 10px;
         border-style: solid;
-        border-color: #ff5722 transparent transparent;
-
+        border-color:#ff5722 transparent transparent;
     }
 
 
@@ -62,7 +60,7 @@
 </head>
 
 <body>
-    <div>
+    <div style="margin-top:100px;">
         This is an awesome 
         <div class="tooltip">
             tooltip
